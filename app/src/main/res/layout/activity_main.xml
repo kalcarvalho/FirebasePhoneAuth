@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f1f1"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/access_code" />
+
+    <LinearLayout
+        android:id="@+id/phoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        android:padding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/lblPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Número de Telefone"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/lblPhoneNumberMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="#999"
+                android:text="Por favor, entre seu número de telefone"
+                app:layout_constraintEnd_toEndOf="@+id/lblPhoneNumber"
+                app:layout_constraintStart_toStartOf="@+id/lblPhoneNumber"
+                app:layout_constraintTop_toBottomOf="@+id/lblPhoneNumber" />
+
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:padding="10dp"
+                android:ems="10"
+                android:textAlignment="center"
+                android:textColorHint="#999"
+                android:background="#fff"
+                android:hint="+55xxxxxxxxxxx"
+                android:inputType="phone"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/lblPhoneNumberMessage"
+                app:layout_constraintStart_toStartOf="@+id/lblPhoneNumberMessage"
+                app:layout_constraintTop_toBottomOf="@+id/lblPhoneNumberMessage" />
+
+            <Button
+                android:id="@+id/phoneContinueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:text="CONTINUAR"
+                android:textColor="#fff"
+                android:backgroundTint="#0000ff"
+                app:layout_constraintEnd_toEndOf="@+id/phoneEt"
+                app:layout_constraintStart_toStartOf="@+id/phoneEt"
+                app:layout_constraintTop_toBottomOf="@+id/phoneEt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/codeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo"
+        android:padding="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Código de Verificação"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/codeSentDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:textColor="#999"
+                android:text="Por favor, entre o código enviado para +55xxxxxxxxxxx"
+                app:layout_constraintEnd_toEndOf="@+id/textView3"
+                app:layout_constraintStart_toStartOf="@+id/textView3"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <EditText
+                android:id="@+id/codeEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ems="10"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColorHint="#999"
+                android:background="#fff"
+                android:textColor="@color/black"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="@+id/codeSentDescription"
+                app:layout_constraintStart_toStartOf="@+id/codeSentDescription"
+                app:layout_constraintTop_toBottomOf="@+id/codeSentDescription" />
+
+            <TextView
+                android:id="@+id/txtResendCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textColor="#999"
+                android:text="Não recebeu o código? Reenviar"
+                app:layout_constraintEnd_toEndOf="@+id/codeEt"
+                app:layout_constraintStart_toStartOf="@+id/codeEt"
+                app:layout_constraintTop_toBottomOf="@+id/codeEt" />
+
+            <Button
+                android:id="@+id/codeSubmitButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:text="SUBMETER"
+                android:textColor="#fff"
+                android:backgroundTint="#0000ff"
+                app:layout_constraintEnd_toEndOf="@+id/txtResendCode"
+                app:layout_constraintStart_toStartOf="@+id/txtResendCode"
+                app:layout_constraintTop_toBottomOf="@+id/txtResendCode" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
